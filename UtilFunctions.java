@@ -1,4 +1,4 @@
-import java.util.List; 
+import java.util.List;
 
 public class UtilFunctions {
 	
@@ -12,6 +12,9 @@ public class UtilFunctions {
 	}
 	
 	public static int ArrayProduct(List<Integer> numbers) {
+		if(numbers.size() <= 0)
+			throw new IllegalArgumentException();
+		
 		int result = 1;
 		for(int x : numbers) {
 			result *= x;
